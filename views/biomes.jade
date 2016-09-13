@@ -1,0 +1,89 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+    title #{title} | Charles Truluck
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='css/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='js/materialize.js')
+    script(src='js/init.js')
+  body
+    nav.green(role='navigation')
+      .nav-wrapper.container
+        a#logo-container.brand-logo(href='#') #{title}
+        ul.right.hide-on-med-and-down 
+          li.waves-effect
+            a(href='/wowilovebiomes') Home
+          li.waves-effect
+            a(href='/wowilovebiomes-faq') FAQs
+          li.waves-effect
+            a(href='/wowilovebiomes-planatrip') Things to Do
+        ul#nav-mobile.side-nav
+          li
+            a.waves-effect(href='/wowilovebiomes') Home
+          li
+            a.waves-effect(href='/wowilovebiomes-faq') FAQs
+          li
+            a.waves-effect(href='/wowilovebiomes-planatrip') Things to Do
+        a.button-collapse(href='#', data-activates='nav-mobile')
+          i.material-icons menu
+     .parallax-container
+      strong
+        h1(style="padding-top:13%;").header.center.white-text Myanmar Forest Services
+      h5(style="font-weight:500").header.center.col.s12.light.white-text We're glad you're here.
+      .parallax
+        img(src='forest.jpg' width="90%")
+    br
+    .container
+      .main-content
+        .row.center
+          .col.s12.m4
+            .icon-block
+              h2.center.green-text.text-darken-3
+                i.material-icons wb_sunny
+              h5.center Weather
+              p.light
+                | The weather in Myanmar is very hot and humid. It is also known as “Monsoon Climate.” It is like the most of the year. It tends to be 72- 81 degrees year round. The cold-dry season lasts from November to February. The hot-dry season lasts from March to April. The wet season is between May and October. 
+              a.waves-effect.waves-light.green.darken-3.btn(href='/wowilovebiomes-faq') More Info 
+          .col.s12.m4
+            .icon-block
+              h2.center.green-text.text-darken-3
+                i.material-icons info_outline
+              h5.center About Us
+              p.light
+                | At Myanmar Forest Services we want you to have a full and fun experience exploring the amazing forests, plants, and animals of Myanmar.
+          .col.s12.m4
+            .icon-block
+              h2.center.green-text.text-darken-3
+                i.material-icons directions_run
+              h5.center Activities
+              p.light
+                | Many activities are provided in the Myanmar Tropical Rainforest. Activities such as zip lining, hiking, nature and canopy tours, and wildlife parks and reserves. 
+              a.waves-effect.waves-light.green.darken-3.btn(href='/wowilovebiomes-planatrip') Thnings to Do
+      br
+      br
+    footer.page-footer.green.darken-1
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text About Myanmar Forest Services
+            p.grey-text.text-lighten-4
+              | At Myanmar Forest Services, we really care about our clients. That's why we offer the best housing, tours, sightseeing, and safety. We take pride in our work, and thats why you can trust us.
+          .col.l3.s12
+            h5.white-text Connect
+            ul
+              li
+                a.white-text(href='http://twitter.com/charlestruluck_' target='_blank') Twitter
+              li
+                a.white-text(href='mailto:myanmarrainservices@ctruluck.com') Email
+      .footer-copyright
+        .container
+          | &copy; 2016 Myanmar Forest Services | 
+          a(href="https://github.com/charlestruluck/website") Source
+    script.
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });

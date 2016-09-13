@@ -1,0 +1,127 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+    title #{title} | Charles Truluck
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='css/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='js/materialize.js')
+    script(src='js/init.js')
+  body
+    nav.green(role='navigation')
+      .nav-wrapper.container
+        a#logo-container.brand-logo(href='#') #{title}
+        ul.right.hide-on-med-and-down 
+          li.waves-effect
+            a(href='/wowilovebiomes') Home
+          li.waves-effect
+            a(href='/wowilovebiomes-faq') FAQs
+          li.waves-effect
+            a(href='/wowilovebiomes-planatrip') Things to Do
+        ul#nav-mobile.side-nav
+          li
+            a.waves-effect(href='/wowilovebiomes') Home
+          li
+            a.waves-effect(href='/wowilovebiomes-faq') FAQs
+          li
+            a.waves-effect(href='/wowilovebiomes-planatrip') Things to Do
+        a.button-collapse(href='#', data-activates='nav-mobile')
+          i.material-icons menu
+     .parallax-container(style="height:50%;")
+      h1(style="padding-top:3%;").header.center.white-text Frequestly Asked
+      h5(style="font-weight:500;padding-bottom:3%;").header.center.col.s12.light.white-text Stuff we get asked often.
+      .parallax
+        img(src='forest.jpg' style="width: 100%;")
+    br
+    .container
+      .main-content
+        .row.center
+          .col.s12.m4
+            .card
+              .card-image
+                img(src='weather_pat.jpg' height='200px;')
+                span.card-title Weather
+              .card-content
+                p
+                | Myanmar has a tropical monsoon climate. We have a fair amount of sun, but high rainfall rates too.
+                | Humidity is also something to consider. Due to our high rainfall rates, we are usually a very humid place.
+                | We also have a dry season in the winter that brings along less rain, and a humid-rain season in the summer.
+                | Make sure you bring a raincoat and umbrella!
+              .card-action
+                a.modal-trigger.waves-effect.waves-light.btn(href='#weather_modal') Weather
+                #weather_modal.modal.modal-fixed-footer(style='width:80%;height:90%;')
+                  .modal-content(style="width:100%; padding:0;")
+                    iframe(src="https://www.wunderground.com/mm/yangon#forecast-graph" style="width: 100%; height: 100%; border: none;")
+                  .modal-footer
+                    .col.s10
+                      p(style='text-align: left; font-size:10px;') Source: https://www.wunderground.com/mm/yangon#forecast-graph
+                    .col.s2
+                      a.modal-action.modal-close.waves-effect.waves-green.btn-flat.green-text.text-darken-3(href='#!') Done
+          .col.s12.m4
+            .card
+              .card-image
+                img(src='animals.jpeg' height='200px;')
+                span.card-title Animals
+              .card-content
+                p
+                | The animal above (The Dusky Langur) lives in the dense forests of Myanmar.
+                | A wide variety of jungle animals like the tiger and leapord can be spotted around Myanmar fairly common.
+                | Other animals like the elephant, rhinoceros, wild boar and many more can be spotted in the highlands of upper Myanmar.
+              .card-action
+                a.modal-trigger.waves-effect.waves-light.btn(href='#animal_modal') Animals
+                #animal_modal.modal.modal-fixed-footer(style='width:80%;height:90%;')
+                  .modal-content(style="width:100%; padding:0;")
+                    iframe(src="http://www.listofcountriesoftheworld.com/bm-animals.html" style="width: 100%; height: 100%; border: none;")
+                  .modal-footer
+                    .col.s10
+                      p(style='text-align: left; font-size:10px;') Source: http://www.listofcountriesoftheworld.com/bm-animals.html
+                    .col.s2
+                      a.modal-action.modal-close.waves-effect.waves-green.btn-flat.green-text.text-darken-3(href='#!') Done
+          .col.s12.m4
+            .card
+              .card-image
+                img(src='plants.jpg' height='200px;')
+                span.card-title Plants
+              .card-content
+                p
+                | Myanmar features strong biodiversity in plant life. Some plants in Myanmar can't be found anyhere else around the world- for instance Brymer's Thunia (Thunia brymeriana, an orchid), Bride of Burma (Amherstia nobilis, a stunning tree) and Farrer Pine (Pinus farreri, a pinecone tree). All of those (and more) are still actively being researched about today.
+              .card-action
+                a.modal-trigger.waves-effect.waves-light.btn(href='#plants_modal') Plants
+                #plants_modal.modal.modal-fixed-footer(style='width:80%;height:90%;')
+                  .modal-content(style="width:100%; padding:0;")
+                    iframe(src="http://lntreasures.com/burma.html" style="width: 100%; height: 100%; border: none;")
+                  .modal-footer
+                    .col.s10
+                      p(style='text-align: left; font-size:10px;') Source: http://lntreasures.com/burma.html
+                    .col.s2
+                      a.modal-action.modal-close.waves-effect.waves-green.btn-flat.green-text.text-darken-3(href='#!') Done
+      br
+      br
+    footer.page-footer.green.darken-1
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text About Myanmar Forest Services
+            p.grey-text.text-lighten-4
+              | At Myanmar Forest Services, we really care about our clients. That's why we offer the best housing, tours, sightseeing, and safety. We take pride in our work, and thats why you can trust us.
+          .col.l3.s12
+            h5.white-text Connect
+            ul
+              li
+                a.white-text(href='http://twitter.com/charlestruluck_' target='_blank') Twitter
+              li
+                a.white-text(href='mailto:myanmarrainservices@ctruluck.com') Email
+      .footer-copyright
+        .container
+          | &copy; 2016 Myanmar Forest Services | 
+          a(href="https://github.com/charlestruluck/website") Source
+    script.
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+      $(document).ready(function(){
+        $('.modal-trigger').leanModal();
+      });
